@@ -2,14 +2,15 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var path =require('path')
 module.exports = {
-   entry: __dirname +'/src/index.js',//入口文件
+   entry: __dirname +'/app.js',//入口文件
    output: {//输出文件
        path: __dirname + '/build',
 	   filename: './bundle.js'
 	},
 	
 	devServer: {
-       contentBase: path.join(__dirname, "build")
+       contentBase: path.join(__dirname, "./"),
+       port:3000
   },
 	
 	/*devServer: {

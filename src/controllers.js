@@ -1,16 +1,16 @@
 var mainCtrl=function($scope,$rootScope){
-	$rootScope.siteName='币安'
+	$scope.siteInfo={};
+	$scope.siteInfo.siteName="币安";
+	$scope.siteInfo.pageTitle="";
+	$rootScope.test="123"
 }
 
-var indexCtrl=function($scope,$rootScope,$http){
-	$rootScope.pageTitle='首页'
-	/*$http.get('/exchange/public/serverTime').success(function(data){
-		
-	})*/
+var indexCtrl=function($scope,$http){
+	$scope.siteInfo.pageTitle='首页'
 }
 
-var listCtrl=function($scope,$rootScope){
-	$rootScope.pageTitle='列表页'
+var listCtrl=function($scope){
+	$scope.siteInfo.pageTitle='列表页'
 }
 
 module.exports={
